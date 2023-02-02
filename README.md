@@ -1,12 +1,5 @@
 # API Spec
 
-## Authentication
-
-All API must use this authentication
-
-Request :
-- Header :
-    - X-Api-Key : "your secret api key"
 
 ## Register
 
@@ -120,6 +113,43 @@ Response :
              ]
         }
     ]
+}
+```
+
+## Book Details
+
+Request :
+- Method : GET
+- Endpoint : `/api/books/:id`
+- Header :
+    - Accept: application/json
+
+Response :
+
+```json 
+{
+    "status" : "number",
+    "data" : {
+         "id" : "string, unique",
+         "title" : "string",
+         "synopsis" : "string",
+         "stock" : "number",
+         "author" : "string",
+         "image_url" : "string",
+         "createdAt" : "datetime",
+         "updatedAt" : "datetime",
+         "categories" : [
+            {
+                "id" : "string, unique",
+                "category" : "string",
+            },
+            {
+                "id" : "string, unique",
+                "category" : "string",
+            }
+         ]    
+    }
+    
 }
 ```
 
