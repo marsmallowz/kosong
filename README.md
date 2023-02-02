@@ -28,7 +28,7 @@ Response :
 }
 ```
 
-## LOGIN
+## Login
 
 Request :
 - Method : POST
@@ -123,6 +123,7 @@ Request :
 - Endpoint : `/api/books/:id`
 - Header :
     - Accept: application/json
+    - Authorization : Bearer your_token
 
 Response :
 
@@ -284,4 +285,72 @@ Response :
 }
 ```
 
+## Create Category
 
+Request :
+- Method : POST
+- Endpoint : `/api/categories/`
+- Header :
+    - Content-Type: application/json
+    - Accept: application/json
+    - Authorization : Bearer your_token
+
+- Body :
+
+```json 
+{
+    "category" : "string", 
+}
+```
+
+Response :
+
+```json 
+{
+    "status" : "number"
+}
+```
+
+## Update Category
+
+Request :
+- Method : PATCH
+- Endpoint : `/api/categories/:category_id`
+- Header :
+    - Content-Type: application/json
+    - Accept: application/json
+    - Authorization : Bearer your_token
+
+- Body :
+
+```json 
+{
+    "category" : "string", 
+}
+```
+
+Response :
+
+```json 
+{
+    "status" : "number"
+}
+```
+
+
+## DELETE Category
+
+Request :
+- Method : DELETE
+- Endpoint : `/api/categories/:category_id`
+- Header :
+    - Accept: application/json
+    - Authorization : Bearer your_token
+
+Response :
+
+```json 
+{
+    "status" : "number"
+}
+```
