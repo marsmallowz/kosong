@@ -588,3 +588,23 @@ Response :
     ]
 }
 ```
+
+## Check Token Session
+
+Request :
+- Method : Get
+- Endpoint : `/api/carts/:book_id`
+- Header :
+    - Accept: application/json
+    - Authorization : Bearer your_token
+
+Response :
+
+```json 
+{
+    "status" : "number",
+    "data": {
+        there_is_loan_limit : "true"
+    }
+}
+```
