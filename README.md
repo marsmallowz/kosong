@@ -604,7 +604,7 @@ Response :
 {
     "status" : "number",
     "data": {
-        there_is_loan_limit : "true"
+        "there_is_loan_limit" : "true"
     }
 }
 ```
