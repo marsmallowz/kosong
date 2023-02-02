@@ -59,6 +59,83 @@ Response :
 }
 ```
 
+## List Book v2
+
+Request :
+- Method : POST
+- Endpoint : `/api/books`
+- Header :
+    - Content-Type: application/json
+    - Accept: application/json
+- Query Param :
+    - size : number,
+    - page : number,
+    - sort : string,
+    - search : string
+- Body :
+
+```json 
+{
+    
+    "categories" : [
+        {
+            "id" : "string, unique",
+            "category" : "string"
+        },
+        {
+            "id" : "string, unique",
+            "category" : "string"
+        }
+    ]
+}
+```
+
+Response :
+
+```json 
+{
+    "status" : "number",
+    "data" : [
+        {
+             "id" : "string, unique",
+             "title" : "string",
+             "synopsis" : "string",
+             "stock" : "number",
+             "author" : "string",
+             "image_url" : "string",
+             "createdAt" : "datetime",
+             "updatedAt" : "datetime",
+             "categories" : [
+                {
+                    "id" : "string, unique",
+                    "category" : "string"
+                },
+                {
+                    "id" : "string, unique",
+                    "category" : "string"
+                }
+             ]
+        },
+         {
+             "id" : "string, unique",
+             "title" : "string",
+             "synopsis" : "string",
+             "stock" : "number",
+             "author" : "string",
+             "image_url" : "string",
+             "createdAt" : "datetime",
+             "updatedAt" : "datetime",
+               "categories" : [
+                {
+                    "id" : "string, unique",
+                    "category" : "string"
+                }
+             ]
+        }
+    ]
+}
+```
+
 ## List Book
 
 Request :
@@ -120,7 +197,7 @@ Response :
 
 Request :
 - Method : GET
-- Endpoint : `/api/books/:id`
+- Endpoint : `/api/books/:book_id`
 - Header :
     - Accept: application/json
     - Authorization : Bearer your_token
