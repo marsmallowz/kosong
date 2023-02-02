@@ -355,7 +355,7 @@ Response :
 }
 ```
 
-## Create Books
+## Create Book
 
 Request :
 - Method : POST
@@ -386,6 +386,60 @@ Request :
     ]
 }
 ```
+
+Response :
+
+```json 
+{
+    "status" : "number"
+}
+```
+
+## Update Book
+
+Request :
+- Method : PATCH
+- Endpoint : `/api/categories/:book_id`
+- Header :
+    - Content-Type: application/json
+    - Accept: application/json
+    - Authorization : Bearer your_token
+
+- Body :
+
+```json 
+{
+    "title" : "string",
+    "synopsis" : "string",
+    "stock" : "number",
+    "author" : "string",
+    "image_url" : "string",
+    "categories" : [
+        {
+            "id" : "string, unique",
+            "category" : "string"
+        }
+    ]
+}
+```
+
+Response :
+
+```json 
+{
+    "status" : "number"
+}
+```
+
+
+## Delete Book
+
+Request :
+- Method : DELETE
+- Endpoint : `/api/categories/:book_id`
+- Header :
+    - Accept: application/json
+    - Authorization : Bearer your_token
 
 Response :
 
