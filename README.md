@@ -592,7 +592,7 @@ Response :
 ## Check Token Session
 
 Request :
-- Method : Get
+- Method : GET
 - Endpoint : `/api/carts/:book_id`
 - Header :
     - Accept: application/json
@@ -606,5 +606,23 @@ Response :
     "data": {
         "there_is_loan_limit" : "true"
     }
+}
+```
+
+
+## Resend Email Verification
+
+Request :
+- Method : POST
+- Endpoint : `/api/auth/v3`
+- Header :
+    - Accept: application/json
+    - Authorization : Bearer your_token
+
+Response :
+
+```json 
+{
+    "status" : "number"
 }
 ```
