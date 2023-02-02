@@ -222,7 +222,7 @@ Response :
 }
 ```
 
-## List Loan
+## List Loan from user
 
 Request :
 - Method : GET
@@ -446,5 +446,68 @@ Response :
 ```json 
 {
     "status" : "number"
+}
+```
+
+## List Loan
+
+Request :
+- Method : GET
+- Endpoint : `/api/loans`
+- Header :
+    - Accept: application/json
+    - Authorization : Bearer your_token
+
+Response :
+
+```json 
+{
+    "status" : "number",
+    "data" : [
+        {
+             "id" : "string, unique",
+             "loan_time" : "datetime",
+             "book" : {
+                "id" : "string, unique",
+                "title" : "string",
+                "synopsis" : "string",
+                "stock" : "number",
+                "author" : "string",
+                "image_url" : "string",
+                "createdAt" : "datetime",
+                "updatedAt" : "datetime",
+                "categories" : [
+                    {
+                        "id" : "string, unique",
+                        "category" : "string"
+                    },
+                    {
+                        "id" : "string, unique",
+                        "category" : "string"
+                    }
+                ]    
+             }
+        },
+        {
+             "id" : "string, unique",
+             "loan_time" : "datetime",
+             "book" : {
+                "id" : "string, unique",
+                "title" : "string",
+                "synopsis" : "string",
+                "stock" : "number",
+                "author" : "string",
+                "image_url" : "string",
+                "createdAt" : "datetime",
+                "updatedAt" : "datetime",
+                "categories" : [
+                    {
+                        "id" : "string, unique",
+                        "category" : "string"
+                    }
+                ]    
+             }
+        }
+    ]
 }
 ```
