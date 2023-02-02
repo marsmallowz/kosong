@@ -43,6 +43,15 @@ Request :
 - Header :
     - Content-Type: application/json
     - Accept: application/json
+- Body :
+
+```json 
+{
+    "nim" : "string",
+    "password" : "string"    
+}
+```
+
 Response :
 
 ```json 
@@ -52,7 +61,6 @@ Response :
          "token" : "string",
          "user" : {
             "username" : "string",
-            "fullname" : "string"
          }
      }
 }
