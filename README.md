@@ -88,11 +88,11 @@ Response :
              "categories" : [
                 {
                     "id" : "string, unique",
-                    "category" : "string",
+                    "category" : "string"
                 },
                 {
                     "id" : "string, unique",
-                    "category" : "string",
+                    "category" : "string"
                 }
              ]
         },
@@ -108,7 +108,7 @@ Response :
                "categories" : [
                 {
                     "id" : "string, unique",
-                    "category" : "string",
+                    "category" : "string"
                 }
              ]
         }
@@ -141,11 +141,11 @@ Response :
          "categories" : [
             {
                 "id" : "string, unique",
-                "category" : "string",
+                "category" : "string"
             },
             {
                 "id" : "string, unique",
-                "category" : "string",
+                "category" : "string"
             }
          ]    
     }
@@ -153,6 +153,30 @@ Response :
 }
 ```
 
+## Add Book to Cart
+
+Request :
+- Method : POST
+- Endpoint : `/api/books/v4`
+- Header :
+    - Content-Type: application/json
+    - Accept: application/json
+    - Authorization : Bearer your_token
+- Body :
+
+```json 
+{
+    "book_id" : "number"
+}
+```
+
+Response :
+
+```json 
+{
+    "status" : "number"
+}
+```
 
 ## Update Product
 
