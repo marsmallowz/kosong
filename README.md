@@ -593,7 +593,7 @@ Response :
 
 Request :
 - Method : GET
-- Endpoint : `/api/carts/:book_id`
+- Endpoint : `/api/auth`
 - Header :
     - Accept: application/json
     - Authorization : Bearer your_token
