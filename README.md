@@ -8,11 +8,11 @@ Request :
 - Header :
     - X-Api-Key : "your secret api key"
 
-## Create Product
+## Register
 
 Request :
 - Method : POST
-- Endpoint : `/api/products`
+- Endpoint : `/api/auth/v1`
 - Header :
     - Content-Type: application/json
     - Accept: application/json
@@ -20,10 +20,10 @@ Request :
 
 ```json 
 {
-    "id" : "string, unique",
-    "name" : "string",
-    "price" : "long",
-    "quantity" : "integer"
+    "nim" : "string",
+    "email" : "string",
+    "username" : "string",
+    "password" : "string"    
 }
 ```
 
@@ -31,40 +31,29 @@ Response :
 
 ```json 
 {
-    "code" : "number",
-    "status" : "string",
-    "data" : {
-         "id" : "string, unique",
-         "name" : "string",
-         "price" : "long",
-         "quantity" : "integer",
-         "createdAt" : "date",
-         "updatedAt" : "date"
-     }
+    "status" : "number"
 }
 ```
 
-## Get Product
+## LOGIN
 
 Request :
-- Method : GET
-- Endpoint : `/api/products/{id_product}`
+- Method : POST
+- Endpoint : `/api/auth/v2`
 - Header :
+    - Content-Type: application/json
     - Accept: application/json
-
 Response :
 
 ```json 
 {
-    "code" : "number",
-    "status" : "string",
+    "status" : "number",
     "data" : {
-         "id" : "string, unique",
-         "name" : "string",
-         "price" : "long",
-         "quantity" : "integer",
-         "createdAt" : "date",
-         "updatedAt" : "date"
+         "token" : "string",
+         "user" : {
+            "username" : "string",
+            "fullname" : "string"
+         }
      }
 }
 ```
