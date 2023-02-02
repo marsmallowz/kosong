@@ -374,7 +374,7 @@ Request :
     "stock" : "number",
     "author" : "string",
     "image_url" : "string",
-    "categories : [
+    "categories" : [
         {
             "id" : "string, unique",
             "category" : "string"
