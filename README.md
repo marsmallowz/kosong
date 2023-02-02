@@ -157,7 +157,7 @@ Response :
 
 Request :
 - Method : POST
-- Endpoint : `/api/books/v4`
+- Endpoint : `/api/carts/:book_id`
 - Header :
     - Content-Type: application/json
     - Accept: application/json
@@ -177,6 +177,121 @@ Response :
     "status" : "number"
 }
 ```
+
+## Delete Book at Cart
+
+Request :
+- Method : DELETE
+- Endpoint : `/api/carts/:book_id`
+- Header :
+    - Accept: application/json
+    - Authorization : Bearer your_token
+
+Response :
+
+```json 
+{
+    "status" : "number"
+}
+```
+
+## Add Book to Loan
+
+Request :
+- Method : POST
+- Endpoint : `/api/loans/:book_id`
+- Header :
+    - Accept: application/json
+    - Authorization : Bearer your_token
+
+Response :
+
+```json 
+{
+    "status" : "number"
+}
+```
+
+## Returning loan books
+
+Request :
+- Method : PATCH
+- Endpoint : `/api/loans/:book_id`
+- Header :
+    - Accept: application/json
+    - Authorization : Bearer your_token
+
+Response :
+
+```json 
+{
+    "status" : "number"
+}
+```
+
+## List Loan
+
+Request :
+- Method : GET
+- Endpoint : `/api/loans/:user_id`
+- Header :
+    - Accept: application/json
+    - Authorization : Bearer your_token
+
+Response :
+
+```json 
+{
+    "status" : "number",
+    "data" : [
+        {
+             "id" : "string, unique",
+             "loan_time" : "datetime",
+             "book" : {
+                "id" : "string, unique",
+                "title" : "string",
+                "synopsis" : "string",
+                "stock" : "number",
+                "author" : "string",
+                "image_url" : "string",
+                "createdAt" : "datetime",
+                "updatedAt" : "datetime",
+                "categories" : [
+                    {
+                        "id" : "string, unique",
+                        "category" : "string"
+                    },
+                    {
+                        "id" : "string, unique",
+                        "category" : "string"
+                    }
+                ]    
+             }
+        },
+        {
+             "id" : "string, unique",
+             "loan_time" : "datetime",
+             "book" : {
+                "id" : "string, unique",
+                "title" : "string",
+                "synopsis" : "string",
+                "stock" : "number",
+                "author" : "string",
+                "image_url" : "string",
+                "createdAt" : "datetime",
+                "updatedAt" : "datetime",
+                "categories" : [
+                    {
+                        "id" : "string, unique",
+                        "category" : "string"
+                    }
+                ]    
+             }
+        }
+    ]
+}
+```
+
 
 ## Update Product
 
