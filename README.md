@@ -91,7 +91,17 @@ Response :
              "author" : "string",
              "image_url" : "string",
              "createdAt" : "datetime",
-             "updatedAt" : "datetime"
+             "updatedAt" : "datetime",
+             "categories" : [
+                {
+                    "id" : "string, unique",
+                    "category" : "string",
+                },
+                {
+                    "id" : "string, unique",
+                    "category" : "string",
+                }
+             ]
         },
          {
              "id" : "string, unique",
@@ -101,7 +111,13 @@ Response :
              "author" : "string",
              "image_url" : "string",
              "createdAt" : "datetime",
-             "updatedAt" : "datetime"
+             "updatedAt" : "datetime",
+               "categories" : [
+                {
+                    "id" : "string, unique",
+                    "category" : "string",
+                }
+             ]
         }
     ]
 }
