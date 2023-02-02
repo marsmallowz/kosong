@@ -66,6 +66,48 @@ Response :
 }
 ```
 
+## List Book
+
+Request :
+- Method : GET
+- Endpoint : `/api/books`
+- Header :
+    - Accept: application/json
+- Query Param :
+    - size : number,
+    - page : number
+
+Response :
+
+```json 
+{
+    "status" : "number",
+    "data" : [
+        {
+             "id" : "string, unique",
+             "title" : "string",
+             "synopsis" : "string",
+             "stock" : "number",
+             "author" : "string",
+             "image_url" : "string",
+             "createdAt" : "datetime",
+             "updatedAt" : "datetime"
+        },
+         {
+             "id" : "string, unique",
+             "title" : "string",
+             "synopsis" : "string",
+             "stock" : "number",
+             "author" : "string",
+             "image_url" : "string",
+             "createdAt" : "datetime",
+             "updatedAt" : "datetime"
+        }
+    ]
+}
+```
+
+
 ## Update Product
 
 Request :
