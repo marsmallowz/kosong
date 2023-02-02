@@ -317,6 +317,7 @@ Response :
         {
              "id" : "string, unique",
              "loan_time" : "datetime",
+             "return" : boolean,
              "book" : {
                 "id" : "string, unique",
                 "title" : "string",
@@ -341,6 +342,7 @@ Response :
         {
              "id" : "string, unique",
              "loan_time" : "datetime",
+             "return" : boolean,
              "book" : {
                 "id" : "string, unique",
                 "title" : "string",
@@ -544,6 +546,7 @@ Response :
         {
              "id" : "string, unique",
              "loan_time" : "datetime",
+             "return" : boolean,
              "book" : {
                 "id" : "string, unique",
                 "title" : "string",
@@ -563,11 +566,17 @@ Response :
                         "category" : "string"
                     }
                 ]    
+             },
+             "user": {
+                "id" : "string, unique",
+                "nim" : "string",
+                "username" : "string",
              }
         },
         {
              "id" : "string, unique",
              "loan_time" : "datetime",
+             "return" : boolean,
              "book" : {
                 "id" : "string, unique",
                 "title" : "string",
@@ -583,6 +592,11 @@ Response :
                         "category" : "string"
                     }
                 ]    
+             },
+             "user": {
+                "id" : "string, unique",
+                "nim" : "string",
+                "username" : "string",
              }
         }
     ]
