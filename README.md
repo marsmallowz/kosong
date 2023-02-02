@@ -338,7 +338,7 @@ Response :
 ```
 
 
-## DELETE Category
+## Delete Category
 
 Request :
 - Method : DELETE
@@ -346,6 +346,46 @@ Request :
 - Header :
     - Accept: application/json
     - Authorization : Bearer your_token
+
+Response :
+
+```json 
+{
+    "status" : "number"
+}
+```
+
+## Create Books
+
+Request :
+- Method : POST
+- Endpoint : `/api/books/`
+- Header :
+    - Content-Type: application/json
+    - Accept: application/json
+    - Authorization : Bearer your_token
+
+- Body :
+
+```json 
+{
+    "title" : "string",
+    "synopsis" : "string",
+    "stock" : "number",
+    "author" : "string",
+    "image_url" : "string",
+    "categories : [
+        {
+            "id" : "string, unique",
+            "category" : "string"
+        },
+        {
+            "id" : "string, unique",
+            "category" : "string"
+        }
+    ]
+}
+```
 
 Response :
 
