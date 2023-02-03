@@ -54,6 +54,7 @@ Response :
          "token" : "string",
          "user" : {
             "username" : "string",
+            "admin" : boolean
          }
      }
 }
