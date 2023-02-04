@@ -304,7 +304,7 @@ Response :
 
 Request :
 - Method : GET
-- Endpoint : `/api/loans/:user_id`
+- Endpoint : `/api/loans`
 - Header :
     - Accept: application/json
     - Authorization : Bearer your_token
@@ -529,7 +529,7 @@ Response :
 }
 ```
 
-## List Loan
+## Get Loans from admin
 
 Request :
 - Method : GET
