@@ -287,7 +287,7 @@ Response :
 
 Request :
 - Method : PATCH
-- Endpoint : `/api/loans/:book_id`
+- Endpoint : `/api/loans/:loan_id`
 - Header :
     - Accept: application/json
     - Authorization : Bearer your_token
