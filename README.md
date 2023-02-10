@@ -549,7 +549,7 @@ Response :
              "loan_time" : "datetime",
              "return" : boolean,
              "book" : {
-                "id" : "string, unique",
+                "id" : "string, unique","string, unique"
                 "title" : "string",
                 "synopsis" : "string",
                 "stock" : "number",
@@ -619,6 +619,10 @@ Response :
 {
     "status" : "number",
     "data": {
+        "user": {
+            "username" : "string",
+            "admin" : boolean
+        },
         "there_is_loan_limit" : "true"
     }
 }
